@@ -3,162 +3,383 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Monoton", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* Your code starts here! */
+
+.container {
+  margin: 50px;
+  margin-top: 200px;
+  max-width: 100%;
+}
 
 
 
+nav {
+  
+  display: flex;
+  padding: 20px;
+  background-color: aliceblue;
 
- 
-.container{
-    width: 1000px;
-    margin: 0 auto;
-    /* border: 1px solid red; */
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
 }
- 
-header nav{
-    display: inline-block;
-    margin-top: 40px;
-    margin-bottom: 40px;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-header .logo{
-    margin-left: 80px;
+a {
+  
+  padding: 0px 30px;
+  text-decoration: none;
+  color: gray;
 }
- 
-header nav a{
-    margin: 0 30px;
-    color: silver;
-    text-decoration: none;
+
+.logo {
+  padding: 0px 5px 0px 80px;
 }
- 
-.head2{
-    border-bottom: 1px solid;
-    margin-top: 50px;
-    margin-bottom: 40px;
+
+.topContent {
+
+  display: flex;
+  box-sizing: border-box;
+  padding-top:100px;
+
+  width: 100%;
 }
- 
-.head2 .div{
-    display: flex;
-    width: 48%;
+
+.innovationOnDemand {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
 }
-.head2 .innovation p{
+
+.innovationOnDemand h1 {
+	
+  font-size: 70px;
+  text-align: center;
+}
+
+.circleLogo {
+  display: flex;
+  padding: 40px 40px 40px 150px;
+}
+.getStartedButton{
+	margin: 0px 30px 0px 156px;
+}
+.button {
+  width: 60%;
+
+  padding: 5px;
+  
+  margin: 0px 30px 0px 0px;
+}
+
+.button p {
+  padding: 5px 10px 5px 90px;
+}
+
+.gradient-button {
+  margin: 10px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 15px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 25px;
+}
+.gradient-button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin: 8px 10px 12px;
+}
+
+.gradient-button {
+  background-image: linear-gradient(
+    to right,
+    #00d2ff 0%,
+    #3a7bd5 51%,
+    #00d2ff 100%
+  );
+}
+.gradient-button-4:hover {
+  background-position: right center;
+}
+
+.middleContent {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  
+}
+
+.top2paragraphs  {
+  display: flex;
+}
+
+.feature,
+.about {
+  
+  width: 48%;
+  padding: 20px 20px 30px 0px;
+}
+
+.middle-img {
+  width: 100%;
+}
+.bottom3paragraphs  {
 	display: flex;
-	justify-content:center;
-    width: 150px;
-    height: 40px;
-    border: 1px solid gray;
-    text-align: bottom;
-    margin-left: 120px;
-    
- 
-}
- 
-.innovation h1{
-    font-size: 80px;
-    text-align: center;
-}
- 
-.innovation, .circlelogo{
-	display: inline-block;
-	flex-direction:column;
-    width:48%;
-}
-.button{
-    display: flex;
-    text-align: center;
-}
-.content{ 
-	display:flex;
-	flex-wrap:wrap;
-	
-		
+  }
+.services,
+.product,
+.vision {
+  
+  width: 33%;
+  padding: 20px 20px 30px 0px;
 }
 
-.FeatureAbout  {
+h1 {
+ 
+  font-size: 60px;
+}
+
+h3 {
+  padding-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0px;
+  background-color: aliceblue;
+}
+
+
+
+
+/* Service page CSS code starts here */
+
+.services-header-img{
+	width:100%;
+	margin-bottom: 3%;
+}
+
+.topServices{
+	width:100%;
+	padding-bottom: 3%;
+}
+
+
+.boxes{
+	border-top:2px solid black;
+	border-bottom:2px solid black;
+	width:100%;
 	display:flex;
-	flex-direction: row;
+	flex-wrap: wrap;
+	
+	justify-content: space-between;
+	
+	
+}
+.box{
+	
+	border: 1px solid black;
+	background-color: WHITESMOKE;
+	border-radius: 5px;
+	width:48%;
+	margin:2% 0;
+}
+ .boxes h3 {
+	
+	padding:2%;
+}
+
+.boxes p{
+	
+	padding:2%;
+}
+
+.bottomFacts{
+	display:flex;
+	justify-content: space-between;
+	margin-top: 3%;
+	
 	
 	
 }
 
-.middle image{
-	margin-top: 500px;
-	padding: 10px 10px 10px 10px;
+.servicesPageFacts {
+	width:48%;
+	
 }
-.ServiceProductVision{
-	display:flex;
-	justify-content: space-around;
-	width: 100;
-	height: auto;
-	margin-top: 50px;
-	padding: 10px 10px 10px 10px;
+.services-info-img{
+	width:48%;
+	padding-top:20px;
+
 }
- 
- 
-.contact{
-    margin-top: 50px;
-    border-top: 1px solid black;
+
+
+
+.bulletPoints {
+	list-style-position:inside;
+	margin-top: 2%;
 }
- 
-footer{
-    text-align: center;
+ul {
+	list-style: disc; 
 }
+
