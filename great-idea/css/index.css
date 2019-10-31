@@ -163,7 +163,7 @@ h5 {
 
 nav {
   
-  display: inline-block;
+  display: flex;
   padding: 20px;
   background-color: aliceblue;
 
@@ -189,7 +189,7 @@ a {
 
 .topContent {
 
-  display: inline-block;
+  display: flex;
   box-sizing: border-box;
   padding-top:100px;
 
@@ -197,17 +197,19 @@ a {
 }
 
 .innovationOnDemand {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   padding: 40px;
 }
 
 .innovationOnDemand h1 {
+	
   font-size: 70px;
   text-align: center;
 }
 
 .circleLogo {
-  display: inline-block;
+  display: flex;
   padding: 40px 40px 40px 150px;
 }
 .getStartedButton{
@@ -264,16 +266,16 @@ a {
 .middleContent {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  display: inline-block;
+  
 }
 
-.top2paragraphs .features .about {
-  display: inline-block;
+.top2paragraphs  {
+  display: flex;
 }
 
 .feature,
 .about {
-  display: inline-block;
+  
   width: 48%;
   padding: 20px 20px 30px 0px;
 }
@@ -281,11 +283,13 @@ a {
 .middle-img {
   width: 100%;
 }
-
+.bottom3paragraphs  {
+	display: flex;
+  }
 .services,
 .product,
 .vision {
-  display: inline-block;
+  
   width: 33%;
   padding: 20px 20px 30px 0px;
 }
